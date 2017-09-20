@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/leadery/servertest/model"
+	"github.com/leadery/go-shit/model"
 )
 
 func viewHandler(w http.ResponseWriter, r *http.Request) {
