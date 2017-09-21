@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"runtime"
 
 	"github.com/leadery/go-shit/model"
 )
@@ -24,6 +25,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	fmt.Printf("Hello %s/%s\n", runtime.GOOS, runtime.GOARCH)
 	log.Println("Starting...")
 	http.HandleFunc("/", handler)
 	http.ListenAndServe(":8080", nil)
